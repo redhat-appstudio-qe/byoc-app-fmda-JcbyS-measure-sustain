@@ -1,0 +1,20 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: vpio
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: vpio
+    app.kubernetes.io/part-of: byoc-app-fmda
+  name: vpiow1rx
+spec:
+  path: /
+  port:
+    targetPort: 8081
+  to:
+    kind: Service
+    name: vpio
+    weight: null
+status: {}
